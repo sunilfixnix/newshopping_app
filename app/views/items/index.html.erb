@@ -29,6 +29,7 @@ tr:nth-child(even) {
 <th>Description</th>
 <th>Price</th>
 <th>Bill_ID</th>
+<th>Cart_ID</th>
 
 </tr><br/>
 <tr>
@@ -39,6 +40,7 @@ tr:nth-child(even) {
 <td><%= item.description %></td>
 <td><%= item.price %></td>
 <td><%= item.bill_id %></td>
+<td><%= item.cart_id %></td>
 <td><%=link_to 'Edit Record', "items/edit" %></td>
 </tr>
 <% end %>

@@ -28,6 +28,7 @@ class LineItemsController < ApplicationController
 
 @cart = current_cart
 item = Item.find(params[:item_id])
+@line_item = @cart.add_item(item.id)
 @line_item = @cart.line_items.build(item: item)
 
 
@@ -67,6 +68,13 @@ notice: 'Line item was successfully created.' }
 
   # DELETE /line_items/1
   # DELETE /line_items/1.json
+
+def total_price
+item.price * quantity
+end
+
+
+
   def destroy
     @line_item.destroy
     respond_to do |format|
