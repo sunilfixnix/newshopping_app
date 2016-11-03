@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Please Create New Bill</h1>
+</head>
+<body>
+<%= form_for (@bill) do |f| %>
+
+
+	  <%= f.label :linenumber %><br/> 
+    <%= f.text_field :linenumber %><br/> 
+    <%= f.label :quantity %><br/> 
+    <%= f.text_field :quantity %><br/>
+    <%= f.label :invoice_id %><br/> 
+    <%= f.text_field :invoice_id %><br/>
+    
+  </div> 
+
+  <div class="actions">
+    <%= f.submit "Create" %><br/> 
+  </div> 
+  <% end %>
+</body>
+</html>

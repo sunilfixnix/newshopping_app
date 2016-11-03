@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>All Customers List</h1>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+<th>Bill_ID</th>
+
+</tr><br/>
+<tr>
+
+<td><%= @item.name %></td>
+<td><%= @item.description %></td>
+<td><%= @item.price %></td>
+<td><%= @item.bill_id %></td>
+
+</tr>
+<% end %>
+</table>
+<%=link_to 'New Item', items_new_path %>
+<%=link_to 'Edit Record', "customers/edit" %>
+</body>
+</html>

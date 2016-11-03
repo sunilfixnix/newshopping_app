@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Customers Bill List</h1>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<th>linenumber</th>
+<th>quantity</th>
+<th>invoice_id</th>
+
+</tr><br/>
+<tr>
+<% @bill.each do |bill| %>
+
+
+<td><%= bill.linenumber %></td>
+<td><%= bill.quantity %></td>
+<td><%= bill.invoice_id %></td>
+<td><%=link_to 'Edit Bill', "bills/edit" %></td>
+
+</tr>
+<% end %>
+</table>
+<%=link_to 'New Bill', bills_new_path %>
+
+</body>
+</html>

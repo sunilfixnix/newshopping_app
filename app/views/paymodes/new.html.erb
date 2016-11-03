@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Please Create New Paymode</h1>
+</head>
+<body>
+<%= form_for (@paymode) do |f| %>
+
+	<%= f.label :name %><br/> 
+    <%= f.text_field :name %><br/> 
+    <%= f.label :card_holder_name %><br/> 
+    <%= f.text_field :card_holder_name %><br/>
+    <%= f.label :cardnumber %><br/> 
+    <%= f.text_field :cardnumber %><br/>
+    <%= f.label :validity %><br/> 
+    <%= f.text_field :validity %><br/>
+    <%= f.label :CCV %><br/> 
+    <%= f.password_field :CCV %><br/>
+    <%= f.label :order_id %><br/> 
+    <%= f.text_field :order_id %><br/>
+
+  </div> 
+
+  <div class="actions">
+    <%= f.submit "Create" %><br/> 
+  </div> 
+  <% end %>
+</body>
+</html>

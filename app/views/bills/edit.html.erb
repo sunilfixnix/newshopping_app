@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>You Can Edit or Update bill Details</h1>
+</head>
+<body>
+<%= form_for @bill,  :url =>{:action => "update", :id =>@bill} do |f| %>
+
+    <%= f.label :linenumber %><br/> 
+    <%= f.text_field :linenumber %><br/> 
+    <%= f.label :quantity %><br/> 
+    <%= f.text_field :quantity %><br/>
+    <%= f.label :invoice_id %><br/> 
+    <%= f.text_field :invoice_id %><br/>
+
+  </div> 
+
+  <div class="actions">
+    <%= f.submit "Update" %><br/> 
+  </div> 
+  <% end %>
+</body>
+</html>

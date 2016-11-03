@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Customers order List</h1>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<th>customer_id</th>
+<th>item_id</th>
+<th>name</th>
+
+</tr><br/>
+<tr>
+<% @order.each do |ord| %>
+
+<td><%= ord.customer_id %></td>
+<td><%= ord.item_id %></td>
+<td><%= ord.name %></td>
+
+</tr>
+<% end %>
+</table>
+<%=link_to 'New Order', orders_new_path %>
+
+
+</body>
+</html>

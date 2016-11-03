@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Please Create New Item</h1>
+</head>
+<body>
+<%= form_for (@item) do |f| %>
+
+
+	<%= f.label :name %><br/> 
+    <%= f.text_field :name %><br/> 
+    <%= f.label :description %><br/> 
+    <%= f.text_area :description %><br/>
+    <%= f.label :price %><br/> 
+    <%= f.text_field :price %><br/>
+     <%= f.label :bill_id %><br/> 
+    <%= f.text_field :bill_id %><br/>
+
+
+  </div> 
+
+  <div class="actions">
+    <%= f.submit "Create" %><br/> 
+  </div> 
+  <% end %>
+</body>
+</html>

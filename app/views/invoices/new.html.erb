@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Please Create New Invoice</h1>
+</head>
+<body>
+<%= form_for (@invoice) do |f| %>
+
+	  <%= f.label :custABN %><br/> 
+    <%= f.text_field :custABN %><br/> 
+    <%= f.label :created %><br/> 
+    <%= f.text_field :created %><br/>
+    <%= f.label :customer_id %><br/> 
+    <%= f.text_field :customer_id %><br/>
+
+  </div> 
+  <div class="actions">
+    <%= f.submit "Create" %><br/> 
+  </div> 
+  <% end %>
+</body>
+</html>

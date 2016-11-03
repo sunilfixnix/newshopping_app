@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>All Invoices List</h1>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<table>
+
+<tr>
+<th>custABN</th>
+<th>created</th>
+<th>customer_id</th>
+
+</tr><br/>
+<tr>
+<% @invoice.each do |inv| %>
+
+
+<td><%= inv.custABN %></td>
+<td><%= inv.created %></td>
+<td><%= inv.customer_id %></td>
+<td><%=link_to 'Edit Invoice', "invoices/edit" %></td>
+
+</tr>
+<% end %>
+</table>
+<%=link_to 'New Invoice', invoices_new_path %>
+
+</body>
+</html>

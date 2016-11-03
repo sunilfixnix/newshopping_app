@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>All Paymodes Details</h1>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<th>name</th>
+<th>card_holder_name</th>
+<th>cardnumber</th>
+<th>validity</th>
+<th>CCV</th>
+<th>order_id</th>
+
+</tr><br/>
+<tr>
+<% @paymode.each do |pay| %>
+
+<td><%= pay.name %></td>
+<td><%= pay.card_holder_name %></td>
+<td><%= pay.cardnumber %></td>
+<td><%= pay.validity %></td>
+<td><%= pay.CCV %></td>
+<td><%= pay.order_id %></td>
+</tr>
+<% end %>
+</table>
+<%=link_to 'New Paymode', paymodes_new_path %>
+</body>
+</html>

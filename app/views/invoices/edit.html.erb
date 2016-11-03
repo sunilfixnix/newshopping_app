@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>You Can Edit or Update Invoice Details</h1>
+</head>
+<body>
+<%= form_for @invoice,  :url =>{:action => "update", :id =>@invoice} do |f| %>
+
+    <%= f.label :custABN %><br/> 
+    <%= f.text_field :custABN %><br/> 
+    <%= f.label :created %><br/> 
+    <%= f.text_field :created %><br/>
+    <%= f.label :customer_id %><br/> 
+    <%= f.text_field :customer_id %><br/>
+
+  </div> 
+
+  <div class="actions">
+    <%= f.submit "Update" %><br/> 
+  </div> 
+  <% end %>
+</body>
+</html>
